@@ -1,0 +1,405 @@
+/*=========================================
+  Apex Saving Bank - Login Page
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#0b3d91,#1e63ff);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/* Background */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:url("../images/login-bg.jpg") center/cover no-repeat;
+    z-index:-2;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(8,25,56,.75);
+    backdrop-filter:blur(6px);
+}
+
+/* Header */
+
+header{
+    width:100%;
+    padding:25px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    font-size:2rem;
+    color:#f5b942;
+}
+
+.logo h2{
+    font-size:1.6rem;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#f5b942;
+}
+
+/* Login Section */
+
+.login-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.login-card{
+    width:100%;
+    max-width:500px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.login-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.login-header h1{
+    font-size:2.3rem;
+    margin-bottom:10px;
+}
+
+.login-header p{
+    color:#dce6ff;
+    line-height:1.7;
+}
+
+/* Form */
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.input-box i{
+    padding:16px;
+    color:#0b3d91;
+}
+
+.input-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:16px;
+    font-size:1rem;
+}
+
+#togglePassword{
+    border:none;
+    background:none;
+    cursor:pointer;
+    padding:16px;
+    color:#0b3d91;
+}
+/*=========================================
+  OPTIONS
+=========================================*/
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0 30px;
+    font-size:.95rem;
+}
+
+.options label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.options a{
+    color:#ffd166;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+/*=========================================
+  BUTTONS
+=========================================*/
+
+.login-btn,
+.create-account-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+}
+
+.login-btn{
+    background:linear-gradient(135deg,#1e63ff,#0b3d91);
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:25px 0;
+    color:#dce6ff;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,.25);
+}
+
+.divider span{
+    padding:0 15px;
+}
+
+.create-account-btn{
+    background:#fff;
+    color:#0b3d91;
+}
+
+.create-account-btn:hover{
+    background:#f5b942;
+    color:#fff;
+}
+
+/*=========================================
+  SECURITY BOX
+=========================================*/
+
+.security-box{
+    margin-top:35px;
+    padding:20px;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.security-box h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+.security-box i{
+    color:#ffd166;
+}
+
+.security-box p{
+    color:#dce6ff;
+    line-height:1.7;
+    font-size:.95rem;
+}
+
+/*=========================================
+  TRUST BADGES
+=========================================*/
+
+.trust-badges{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.badge{
+    background:rgba(255,255,255,.08);
+    border-radius:14px;
+    padding:18px 10px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.badge i{
+    font-size:1.5rem;
+    color:#ffd166;
+    margin-bottom:10px;
+}
+
+.badge span{
+    display:block;
+    font-size:.9rem;
+}
+
+/*=========================================
+  FOOTER
+=========================================*/
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    color:#dce6ff;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ffd166;
+}
+
+/*=========================================
+  ANIMATION
+=========================================*/
+
+.login-card{
+    animation:slideUp .8s ease;
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/*=========================================
+  RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+header{
+    padding:20px;
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.login-card{
+    padding:30px 24px;
+}
+
+.login-header h1{
+    font-size:2rem;
+}
+
+.trust-badges{
+    grid-template-columns:1fr;
+}
+
+.options{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.login-header h1{
+    font-size:1.7rem;
+}
+
+.logo h2{
+    font-size:1.3rem;
+}
+
+.input-box input{
+    font-size:.95rem;
+}
+
+.login-btn,
+.create-account-btn{
+    font-size:.95rem;
+}
+
+}
