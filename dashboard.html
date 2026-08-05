@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Apex Saving Bank | Dashboard
+
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Apex Saving Bank</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="accounts.html">
+
+<i class="fa-solid fa-wallet"></i>
+
+Accounts
+
+</a>
+
+</li>
+
+<li>
+
+<a href="transfer.html">
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+Transfers
+
+</a>
+
+</li>
+
+<li>
+
+<a href="transactions.html">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Transactions
+
+</a>
+
+</li>
+
+<li>
+
+<a href="cards.html">
+
+<i class="fa-solid fa-credit-card"></i>
+
+Cards
+
+</a>
+
+</li>
+
+<li>
+
+<a href="loans.html">
+
+<i class="fa-solid fa-hand-holding-dollar"></i>
+
+Loans
+
+</a>
+
+</li>
+
+<li>
+
+<a href="profile.html">
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+<li>
+
+<a href="login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ==========================
+MAIN CONTENT
+========================== -->
+
+<div class="main-content">
+
+<header class="topbar">
+
+<div>
+
+<h1>
+
+Welcome back,
+
+<span>Timothy</span>
+
+</h1>
+
+<p>
+
+Manage your finances securely.
+
+</p>
+
+</div>
+
+<div class="top-actions">
+
+<button>
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<img
+src="images/avatar.png"
+alt="Profile">
+
+</div>
+
+</header>
+
+<!-- ==========================
+ACCOUNT SUMMARY
+========================== -->
+
+<section class="summary">
+
+<div class="balance-card">
+
+<h4>Available Balance</h4>
+
+<h2>$24,580.40</h2>
+
+<p>
+
+Checking Account • **** 2481
+
+</p>
+
+</div>
+
+<div class="summary-card">
+
+<i class="fa-solid fa-arrow-up-right-dots"></i>
+
+<h3>$5,800</h3>
+
+<p>Total Income</p>
+
+</div>
+
+<div class="summary-card">
+
+<i class="fa-solid fa-arrow-down"></i>
+
+<h3>$2,150</h3>
+
+<p>Total Expenses</p>
+
+</div>
+
+<div class="summary-card">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<h3>$42,000</h3>
+
+<p>Total Savings</p>
+
+</div>
+
+</section>
+
+<!-- Part 2 continues with:
+Quick Actions
+Recent Transactions
+Spending Overview
+Cards
+Footer -->
+
+<!-- ==========================
+QUICK ACTIONS
+========================== -->
+
+<section class="quick-actions">
+
+<h2>Quick Actions</h2>
+
+<div class="action-grid">
+
+<a href="transfer.html" class="action-card">
+<i class="fa-solid fa-money-bill-transfer"></i>
+<span>Transfer Money</span>
+</a>
+
+<a href="pay-bills.html" class="action-card">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+<span>Pay Bills</span>
+</a>
+
+<a href="deposit.html" class="action-card">
+<i class="fa-solid fa-piggy-bank"></i>
+<span>Deposit</span>
+</a>
+
+<a href="request-money.html" class="action-card">
+<i class="fa-solid fa-hand-holding-dollar"></i>
+<span>Request Money</span>
+</a>
+
+</div>
+
+</section>
+
+<!-- ==========================
+RECENT TRANSACTIONS
+========================== -->
+
+<section class="transactions">
+
+<div class="section-header">
+
+<h2>Recent Transactions</h2>
+
+<a href="transactions.html">
+View All
+</a>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Description</th>
+
+<th>Type</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>30 Jul 2026</td>
+
+<td>Salary Deposit</td>
+
+<td>Credit</td>
+
+<td class="credit">+$5,000.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>29 Jul 2026</td>
+
+<td>Electricity Bill</td>
+
+<td>Debit</td>
+
+<td class="debit">-$120.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>28 Jul 2026</td>
+
+<td>Online Shopping</td>
+
+<td>Debit</td>
+
+<td class="debit">-$89.50</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>27 Jul 2026</td>
+
+<td>Transfer Received</td>
+
+<td>Credit</td>
+
+<td class="credit">+$800.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================
+BANK CARD
+========================== -->
+
+<section class="cards-section">
+
+<h2>Your Primary Card</h2>
+
+<div class="bank-card">
+
+<div class="card-top">
+
+<h3>Apex Saving Bank</h3>
+
+<i class="fa-solid fa-wifi"></i>
+
+</div>
+
+<h2 class="card-number">
+
+**** **** **** 2481
+
+</h2>
+
+<div class="card-bottom">
+
+<div>
+
+<p>Card Holder</p>
+
+<h4>Timothy</h4>
+
+</div>
+
+<div>
+
+<p>Expires</p>
+
+<h4>09/30</h4>
+
+</div>
+
+<div>
+
+<i class="fa-brands fa-cc-visa fa-2x"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+FINANCIAL INSIGHTS
+========================== -->
+
+<section class="insights">
+
+<h2>Financial Insights</h2>
+
+<div class="insight-grid">
+
+<div class="insight-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Spending</h3>
+
+<p>Your spending is 8% lower than last month.</p>
+
+</div>
+
+<div class="insight-card">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<h3>Savings Goal</h3>
+
+<p>You have reached 72% of your savings target.</p>
+
+</div>
+
+<div class="insight-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Security</h3>
+
+<p>Your account security status is excellent.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer>
+
+<p>
+
+© 2026 Apex Saving Bank.
+Secure Banking. Simplified.
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

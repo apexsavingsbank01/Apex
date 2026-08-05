@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Apex Saving Bank | Settings</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/settings.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Apex Saving Bank</h2>
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="profile.html">Profile</a>
+
+<a href="cards.html">Cards</a>
+
+<a href="transactions.html">Transactions</a>
+
+</nav>
+
+</header>
+
+<section class="settings-page">
+
+<div class="page-header">
+
+<h1>Settings</h1>
+
+<p>
+
+Manage your preferences, privacy and account security.
+
+</p>
+
+</div>
+
+<div class="settings-card">
+
+<h2>Appearance</h2>
+
+<div class="setting-item">
+
+<div>
+
+<h4>Theme</h4>
+
+<p>Choose your preferred interface theme.</p>
+
+</div>
+
+<select id="themeSelect">
+
+<option value="light">Light</option>
+
+<option value="dark">Dark</option>
+
+<option value="system">System Default</option>
+
+</select>
+
+</div>
+
+<div class="setting-item">
+
+<div>
+
+<h4>Language</h4>
+
+<p>Select your preferred language.</p>
+
+</div>
+
+<select id="languageSelect">
+
+<option>English</option>
+
+<option>French</option>
+
+<option>Spanish</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="settings-card">
+
+<h2>Privacy & Security</h2>
+
+<label class="toggle">
+
+<input
+type="checkbox"
+checked>
+
+<span>Email Login Alerts</span>
+
+</label>
+
+<label class="toggle">
+
+<input
+type="checkbox"
+checked>
+
+<span>Transaction Notifications</span>
+
+</label>
+
+<label class="toggle">
+
+<input
+type="checkbox">
+
+<span>Remember This Device</span>
+
+</label>
+
+<button
+id="logoutAll"
+class="danger-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Log Out of All Devices
+
+</button>
+</div>
+
+<!-- Connected Devices -->
+
+<div class="settings-card">
+
+<h2>Connected Devices</h2>
+
+<div class="device-item">
+
+<div>
+
+<h4>Windows Laptop</h4>
+
+<p>Last active: Today, 10:45 AM</p>
+
+</div>
+
+<span class="active-device">Current Device</span>
+
+</div>
+
+<div class="device-item">
+
+<div>
+
+<h4>iPhone 15</h4>
+
+<p>Last active: Yesterday, 8:15 PM</p>
+
+</div>
+
+<button class="remove-device">
+
+Remove
+
+</button>
+
+</div>
+
+<div class="device-item">
+
+<div>
+
+<h4>Android Tablet</h4>
+
+<p>Last active: 3 days ago</p>
+
+</div>
+
+<button class="remove-device">
+
+Remove
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Login History -->
+
+<div class="settings-card">
+
+<h2>Recent Login Activity</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Device</th>
+
+<th>Location</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>30 Jul 2026</td>
+
+<td>Windows Laptop</td>
+
+<td>New York, USA</td>
+
+<td><span class="success">Successful</span></td>
+
+</tr>
+
+<tr>
+
+<td>29 Jul 2026</td>
+
+<td>iPhone</td>
+
+<td>New York, USA</td>
+
+<td><span class="success">Successful</span></td>
+
+</tr>
+
+<tr>
+
+<td>27 Jul 2026</td>
+
+<td>Android Tablet</td>
+
+<td>Boston, USA</td>
+
+<td><span class="success">Successful</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Danger Zone -->
+
+<div class="settings-card danger-zone">
+
+<h2>Danger Zone</h2>
+
+<p>
+
+Deleting your account is permanent and cannot be undone.
+
+</p>
+
+<button id="deleteAccount" class="danger-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete Account
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Security</a>
+
+<a href="#">Terms of Service</a>
+
+<a href="contact.html">Contact Us</a>
+
+</div>
+
+<p>
+
+© 2026 Apex Saving Bank. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

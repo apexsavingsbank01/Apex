@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apex Saving Bank | Transactions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/transactions.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Apex Saving Bank</h2>
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="transfer.html">Transfer</a>
+
+<a href="cards.html">Cards</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<section class="transactions-page">
+
+<div class="page-header">
+
+<h1>Transaction History</h1>
+
+<p>
+
+View and search all your account activity.
+
+</p>
+
+</div>
+
+<div class="filters">
+
+<input
+type="text"
+id="searchTransaction"
+placeholder="Search by description...">
+
+<select id="filterType">
+
+<option value="all">All Transactions</option>
+
+<option value="credit">Credits</option>
+
+<option value="debit">Debits</option>
+
+</select>
+
+</div>
+
+<div class="transactions-table">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Description</th>
+
+<th>Reference</th>
+
+<th>Type</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="transactionTable">
+
+<tr>
+
+<td>30 Jul 2026</td>
+
+<td>Salary Deposit</td>
+
+<td>TRX102345</td>
+
+<td class="credit">Credit</td>
+
+<td class="credit">+$5,000.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>29 Jul 2026</td>
+
+<td>Electricity Bill</td>
+
+<td>TRX102344</td>
+
+<td class="debit">Debit</td>
+
+<td class="debit">-$120.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>28 Jul 2026</td>
+
+<td>Amazon Purchase</td>
+
+<td>TRX102343</td>
+
+<td class="debit">Debit</td>
+
+<td class="debit">-$89.50</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>27 Jul 2026</td>
+
+<td>Transfer Received</td>
+
+<td>TRX102342</td>
+
+<td class="credit">Credit</td>
+
+<td class="credit">+$800.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>26 Jul 2026</td>
+
+<td>ATM Cash Withdrawal</td>
+
+<td>TRX102341</td>
+
+<td class="debit">Debit</td>
+
+<td class="debit">-$200.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>25 Jul 2026</td>
+
+<td>Interest Payment</td>
+
+<td>TRX102340</td>
+
+<td class="credit">Credit</td>
+
+<td class="credit">+$15.75</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>24 Jul 2026</td>
+
+<td>Netflix Subscription</td>
+
+<td>TRX102339</td>
+
+<td class="debit">Debit</td>
+
+<td class="debit">-$19.99</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>23 Jul 2026</td>
+
+<td>Mobile Deposit</td>
+
+<td>TRX102338</td>
+
+<td class="credit">Credit</td>
+
+<td class="credit">+$350.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Transaction Summary -->
+
+<div class="summary-grid">
+
+<div class="summary-card">
+
+<i class="fa-solid fa-arrow-trend-up"></i>
+
+<h3>$6,165.75</h3>
+
+<p>Total Credits</p>
+
+</div>
+
+<div class="summary-card">
+
+<i class="fa-solid fa-arrow-trend-down"></i>
+
+<h3>$429.49</h3>
+
+<p>Total Debits</p>
+
+</div>
+
+<div class="summary-card">
+
+<i class="fa-solid fa-list-check"></i>
+
+<h3>8</h3>
+
+<p>Transactions</p>
+
+</div>
+
+</div>
+
+<!-- Export Buttons -->
+
+<div class="actions">
+
+<button class="download-btn">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+Export PDF
+
+</button>
+
+<button class="download-btn">
+
+<i class="fa-solid fa-file-csv"></i>
+
+Export CSV
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Security</a>
+
+<a href="#">Terms of Service</a>
+
+<a href="contact.html">Contact Us</a>
+
+</div>
+
+<p>
+
+© 2026 Apex Saving Bank. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/transactions.js"></script>
+
+</body>
+
+</html>

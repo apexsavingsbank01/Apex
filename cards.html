@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Apex Saving Bank | My Cards</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/cards.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Apex Saving Bank</h2>
+
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="transactions.html">Transactions</a>
+
+<a href="transfer.html">Transfer</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</header>
+
+<section class="cards-page">
+
+<div class="page-header">
+
+<h1>My Cards</h1>
+
+<p>
+
+Manage your debit and credit cards securely.
+
+</p>
+
+</div>
+
+<div class="cards-grid">
+
+<!-- Debit Card -->
+
+<div class="bank-card debit">
+
+<div class="card-top">
+
+<h3>Apex Saving Bank</h3>
+
+<i class="fa-solid fa-wifi"></i>
+
+</div>
+
+<h2 class="card-number">
+
+**** **** **** 2481
+
+</h2>
+
+<div class="card-bottom">
+
+<div>
+
+<p>Card Holder</p>
+
+<h4>Timothy</h4>
+
+</div>
+
+<div>
+
+<p>Expires</p>
+
+<h4>09/30</h4>
+
+</div>
+
+<div>
+
+<i class="fa-brands fa-cc-visa fa-2x"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Credit Card -->
+
+<div class="bank-card credit">
+
+<div class="card-top">
+
+<h3>Apex Platinum</h3>
+
+<i class="fa-solid fa-wifi"></i>
+
+</div>
+
+<h2 class="card-number">
+
+**** **** **** 7812
+
+</h2>
+
+<div class="card-bottom">
+
+<div>
+
+<p>Card Holder</p>
+
+<h4>Timothy</h4>
+
+</div>
+
+<div>
+
+<p>Expires</p>
+
+<h4>12/29</h4>
+
+</div>
+
+<div>
+
+<i class="fa-brands fa-cc-mastercard fa-2x"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card-controls">
+
+<h2>Card Controls</h2>
+
+<div class="control-grid">
+
+<button id="freezeCard">
+
+<i class="fa-solid fa-snowflake"></i>
+
+Freeze Card
+
+</button>
+
+<button id="replaceCard">
+
+<i class="fa-solid fa-credit-card"></i>
+
+Replace Card
+
+</button>
+
+<button id="changePin">
+
+<i class="fa-solid fa-key"></i>
+
+Change PIN
+
+</button>
+
+<button id="viewLimits">
+
+<i class="fa-solid fa-chart-column"></i>
+
+View Limits
+
+</button>
+
+</div>
+
+<!-- Card Spending Limits -->
+
+<div class="limits-section">
+
+<h2>Spending Limits</h2>
+
+<div class="limit-item">
+
+<span>ATM Withdrawal</span>
+
+<strong>$2,000 / Day</strong>
+
+</div>
+
+<div class="limit-item">
+
+<span>Online Purchases</span>
+
+<strong>$5,000 / Day</strong>
+
+</div>
+
+<div class="limit-item">
+
+<span>POS Transactions</span>
+
+<strong>$10,000 / Day</strong>
+
+</div>
+
+<div class="limit-item">
+
+<span>International Transactions</span>
+
+<strong>Enabled</strong>
+
+</div>
+
+</div>
+
+<!-- Recent Card Activity -->
+
+<div class="activity-section">
+
+<h2>Recent Card Activity</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Merchant</th>
+
+<th>Card</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>30 Jul 2026</td>
+
+<td>Amazon</td>
+
+<td>Visa ••••2481</td>
+
+<td>-$89.50</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>29 Jul 2026</td>
+
+<td>Netflix</td>
+
+<td>Visa ••••2481</td>
+
+<td>-$19.99</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>28 Jul 2026</td>
+
+<td>Apple Store</td>
+
+<td>Mastercard ••••7812</td>
+
+<td>-$249.00</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+<tr>
+
+<td>27 Jul 2026</td>
+
+<td>Uber</td>
+
+<td>Visa ••••2481</td>
+
+<td>-$22.40</td>
+
+<td><span class="success">Completed</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Security Tips -->
+
+<div class="security-box">
+
+<h2>
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Card Security
+
+</h2>
+
+<p>
+
+Never share your PIN or card verification code (CVV).
+If your card is lost or stolen, freeze it immediately
+and contact Apex Saving Bank customer support.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-links">
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Security</a>
+
+<a href="#">Terms of Service</a>
+
+<a href="contact.html">Contact Us</a>
+
+</div>
+
+<p>
+
+© 2026 Apex Saving Bank.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/cards.js"></script>
+
+</body>
+
+</html>
