@@ -1,0 +1,414 @@
+/*=========================================
+  Apex Saving Bank - Settings Page
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#0b3d91;
+    --secondary:#1e63ff;
+    --danger:#dc2626;
+    --success:#16a34a;
+    --gold:#f5b942;
+    --dark:#0f172a;
+    --gray:#64748b;
+    --light:#f4f7fb;
+    --white:#ffffff;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+}
+
+/*==============================
+HEADER
+==============================*/
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 60px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    font-size:2rem;
+    color:var(--gold);
+}
+
+.logo h2{
+    font-size:1.5rem;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/*==============================
+PAGE
+==============================*/
+
+.settings-page{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.page-header{
+    margin-bottom:35px;
+}
+
+.page-header h1{
+    color:var(--primary);
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.page-header p{
+    color:var(--gray);
+}
+
+/*==============================
+SETTINGS CARDS
+==============================*/
+
+.settings-card{
+    background:#fff;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.settings-card h2{
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+/*==============================
+SETTING ITEMS
+==============================*/
+
+.setting-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid #edf2f7;
+}
+
+.setting-item:last-child{
+    border-bottom:none;
+}
+
+.setting-item h4{
+    margin-bottom:5px;
+}
+
+.setting-item p{
+    color:var(--gray);
+    font-size:.95rem;
+}
+
+.setting-item select{
+    padding:12px 16px;
+    border:1px solid #d8e0eb;
+    border-radius:10px;
+    outline:none;
+    font-size:.95rem;
+    background:#fff;
+}
+
+.setting-item select:focus{
+    border-color:var(--secondary);
+}
+
+/*==============================
+TOGGLE OPTIONS
+==============================*/
+
+.toggle{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.toggle input{
+    accent-color:var(--secondary);
+    transform:scale(1.2);
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.danger-btn{
+    margin-top:20px;
+    background:var(--danger);
+    color:#fff;
+    border:none;
+    padding:15px 22px;
+    border-radius:12px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.danger-btn:hover{
+    background:#b91c1c;
+    transform:translateY(-3px);
+}
+
+.danger-btn i{
+    margin-right:8px;
+}
+/*=========================================
+  CONNECTED DEVICES
+=========================================*/
+
+.device-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    border-bottom:1px solid #edf2f7;
+}
+
+.device-item:last-child{
+    border-bottom:none;
+}
+
+.device-item h4{
+    margin-bottom:5px;
+    color:var(--dark);
+}
+
+.device-item p{
+    color:var(--gray);
+    font-size:.95rem;
+}
+
+.active-device{
+    background:#dcfce7;
+    color:var(--success);
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.remove-device{
+    background:#fff;
+    color:var(--danger);
+    border:1px solid var(--danger);
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.remove-device:hover{
+    background:var(--danger);
+    color:#fff;
+}
+
+/*=========================================
+  LOGIN HISTORY
+=========================================*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:var(--primary);
+    color:#fff;
+}
+
+th,
+td{
+    padding:16px;
+    text-align:left;
+}
+
+tbody tr{
+    border-bottom:1px solid #edf2f7;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+.success{
+    display:inline-block;
+    background:#dcfce7;
+    color:var(--success);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+/*=========================================
+  DANGER ZONE
+=========================================*/
+
+.danger-zone{
+    border-left:5px solid var(--danger);
+}
+
+.danger-zone p{
+    color:var(--gray);
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/*=========================================
+  FOOTER
+=========================================*/
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    color:var(--gray);
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:var(--secondary);
+}
+
+/*=========================================
+  ANIMATIONS
+=========================================*/
+
+.settings-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================================
+  RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:18px;
+    padding:25px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.page-header h1{
+    font-size:2rem;
+}
+
+.setting-item,
+.device-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+}
+
+@media(max-width:480px){
+
+.settings-page{
+    padding:30px 15px;
+}
+
+.page-header h1{
+    font-size:1.7rem;
+}
+
+.settings-card{
+    padding:22px;
+}
+
+.danger-btn,
+.remove-device{
+    width:100%;
+}
+
+.footer-links{
+    flex-direction:column;
+    gap:12px;
+}
+
+}

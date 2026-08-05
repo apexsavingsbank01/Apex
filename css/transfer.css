@@ -1,0 +1,362 @@
+/*=========================================
+  Apex Saving Bank - Transfer Page
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#0b3d91;
+    --secondary:#1e63ff;
+    --gold:#f5b942;
+    --dark:#0f172a;
+    --gray:#64748b;
+    --white:#ffffff;
+    --shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#eef5ff,#dbe9ff);
+    color:var(--dark);
+    min-height:100vh;
+}
+
+/*==============================
+HEADER
+==============================*/
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    padding:22px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    color:var(--gold);
+    font-size:2rem;
+}
+
+.logo h2{
+    font-size:1.5rem;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/*==============================
+TRANSFER SECTION
+==============================*/
+
+.transfer-section{
+    display:flex;
+    justify-content:center;
+    padding:50px 20px 80px;
+}
+
+.transfer-card{
+    width:100%;
+    max-width:850px;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:var(--shadow);
+}
+
+.transfer-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.transfer-header h1{
+    font-size:2.4rem;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.transfer-header p{
+    color:var(--gray);
+}
+
+/*==============================
+FORM
+==============================*/
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:22px;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding:15px;
+    border:1px solid #d6dce8;
+    border-radius:12px;
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
+    font-family:inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:var(--secondary);
+    box-shadow:0 0 0 3px rgba(30,99,255,.15);
+}
+
+textarea{
+    resize:vertical;
+    min-height:110px;
+}
+
+.transfer-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+.transfer-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+/*=========================================
+  TRANSFER SUMMARY
+=========================================*/
+
+.transfer-summary{
+    margin-top:30px;
+    padding:25px;
+    background:#f8fbff;
+    border:1px solid #dce8ff;
+    border-radius:18px;
+}
+
+.transfer-summary h3{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.summary-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #e5edf8;
+}
+
+.summary-item:last-child{
+    border-bottom:none;
+}
+
+.summary-item span{
+    color:var(--gray);
+}
+
+.summary-item strong{
+    color:var(--dark);
+}
+
+/*=========================================
+  SECURITY NOTICE
+=========================================*/
+
+.security-notice{
+    margin-top:25px;
+    padding:22px;
+    background:#fff8e8;
+    border-left:5px solid var(--gold);
+    border-radius:16px;
+}
+
+.security-notice h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.security-notice i{
+    color:var(--gold);
+}
+
+.security-notice p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/*=========================================
+  CONFIRMATION
+=========================================*/
+
+.confirmation{
+    margin-top:25px;
+}
+
+.confirmation label{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    line-height:1.7;
+    cursor:pointer;
+}
+
+.confirmation input{
+    margin-top:4px;
+    accent-color:var(--secondary);
+}
+
+/*=========================================
+  FOOTER
+=========================================*/
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    color:var(--gray);
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-bottom:16px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:var(--secondary);
+}
+
+/*=========================================
+  ANIMATION
+=========================================*/
+
+.transfer-card{
+    animation:slideUp .8s ease;
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================================
+  RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:18px;
+    padding:25px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+}
+
+.transfer-card{
+    padding:28px 22px;
+}
+
+.transfer-header h1{
+    font-size:2rem;
+}
+
+.summary-item{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+}
+
+}
+
+@media(max-width:480px){
+
+.transfer-header h1{
+    font-size:1.7rem;
+}
+
+.logo h2{
+    font-size:1.2rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    font-size:.95rem;
+}
+
+.transfer-btn{
+    font-size:.95rem;
+}
+
+.footer-links{
+    flex-direction:column;
+    gap:12px;
+}
+
+}
