@@ -1,0 +1,416 @@
+/*=========================================
+  Apex Saving Bank Dashboard
+=========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#0b3d91;
+    --secondary:#1e63ff;
+    --gold:#f4b400;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --bg:#f4f7fb;
+    --white:#ffffff;
+    --text:#0f172a;
+    --gray:#64748b;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#fff;
+    box-shadow:var(--shadow);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    color:var(--gold);
+    font-size:2rem;
+}
+
+.logo h2{
+    font-size:1.5rem;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    padding:10px 16px;
+    border-radius:10px;
+    transition:.3s;
+    font-weight:600;
+}
+
+nav a:hover,
+nav a.active{
+    background:rgba(255,255,255,.15);
+}
+
+#logoutBtn{
+    background:#dc2626;
+}
+
+#logoutBtn:hover{
+    background:#b91c1c;
+}
+
+/*=========================
+WELCOME
+=========================*/
+
+.welcome{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.welcome h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.welcome span{
+    color:var(--primary);
+}
+
+.welcome p{
+    color:var(--gray);
+}
+
+.notify{
+    position:relative;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+}
+
+.notify i{
+    font-size:1.5rem;
+    color:var(--primary);
+}
+
+.badge{
+    position:absolute;
+    top:5px;
+    right:5px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#dc2626;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:.75rem;
+}
+
+/*=========================
+BALANCE CARDS
+=========================*/
+
+.balance-cards{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.card.primary{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+}
+
+.card h1{
+    font-size:2.2rem;
+    margin:15px 0;
+}
+
+.card h2{
+    margin-top:12px;
+}
+
+.card p{
+    opacity:.9;
+}
+
+/*=========================
+QUICK ACTIONS
+=========================*/
+
+.quick-actions{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.quick-actions h2{
+    margin-bottom:25px;
+    color:var(--primary);
+}
+
+.action-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+}
+
+.action{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.action:hover{
+    transform:translateY(-6px);
+    background:var(--secondary);
+    color:#fff;
+}
+
+.action i{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+/*=========================================
+  DASHBOARD GRID
+=========================================*/
+
+.dashboard-grid{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.dashboard-card{
+    background:var(--white);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+}
+
+.dashboard-card h2{
+    color:var(--primary);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/*=========================================
+TABLE
+=========================================*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:var(--primary);
+    color:#fff;
+}
+
+th,
+td{
+    padding:16px;
+    text-align:left;
+}
+
+tbody tr{
+    border-bottom:1px solid #edf2f7;
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#f8fbff;
+}
+
+.credit{
+    color:var(--success);
+    font-weight:700;
+}
+
+.debit{
+    color:var(--danger);
+    font-weight:700;
+}
+
+.success{
+    display:inline-block;
+    background:#dcfce7;
+    color:var(--success);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+/*=========================================
+NOTIFICATIONS
+=========================================*/
+
+.notifications{
+    list-style:none;
+}
+
+.notifications li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+    color:var(--gray);
+    line-height:1.6;
+}
+
+.notifications i{
+    color:var(--secondary);
+    margin-top:3px;
+}
+
+/*=========================================
+STATS
+=========================================*/
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:#f8fbff;
+    border-radius:18px;
+    text-align:center;
+    padding:25px;
+    border:1px solid #e6eefb;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-6px);
+}
+
+.stat h3{
+    color:var(--primary);
+    font-size:2rem;
+    margin-bottom:8px;
+}
+
+.stat p{
+    color:var(--gray);
+}
+
+/*=========================================
+SECURITY
+=========================================*/
+
+.security-card{
+    border-left:5px solid var(--gold);
+}
+
+.security-card p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/*=========================================
+FOOTER
+=========================================*/
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    color:var(--gray);
+}
+
+/*=========================================
+ANIMATIONS
+=========================================*/
+
+.card,
+.action,
+.dashboard-card{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.dashboard-grid{
+    grid
